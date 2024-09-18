@@ -1,6 +1,5 @@
 import z from "zod";
 
-
 export const quizSchema = z.object({
   questions: z
     .array(
@@ -20,4 +19,3 @@ export const quizSchema = z.object({
 });
 
 export type QuizInputs = z.infer<typeof quizSchema>;
-
