@@ -2,7 +2,6 @@ import { useFormContext, useFieldArray, Controller } from "react-hook-form";
 import { QuizInputs } from "./schema";
 import { Button, Checkbox, Input } from "@nextui-org/react";
 import { Plus, X } from "lucide-react";
-import { motion } from "framer-motion";
 
 
 const AnsForm = ({ questionIndex }: { questionIndex: number }) => {
@@ -30,9 +29,7 @@ const AnsForm = ({ questionIndex }: { questionIndex: number }) => {
     remove(answerIndex);
   };
   return (
-    // <AnimatePresence>
     <div className="space-y-4">
-      {/* <AnimatePresence> */}
       {answerFields?.map((answerField, answerIndex) => (
         <div
           key={answerIndex}
@@ -68,13 +65,12 @@ const AnsForm = ({ questionIndex }: { questionIndex: number }) => {
           </div>
         </div>
       ))}
-      {/* </AnimatePresence> */}
 
       <Button fullWidth type="button" size="lg" variant="bordered" radius="sm" onClick={addAnswer}>
         <Plus /> Add Answer
       </Button>
     </div>
-    // </AnimatePresence>
+
   );
 };
 
